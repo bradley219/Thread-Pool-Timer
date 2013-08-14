@@ -8,12 +8,13 @@ A C++11 library which allows lambda functions (anonymous/closure functions) to b
 
 Features
 --------
+* Simple to incorporate into existing projects. All of the framework needed to maintain the thread pool is bootstrapped after the first timer is registered.
 * Requires only one private thread to manage timing events.
+* Timer events can be attached directly to a C++11 lambda function, executing in the scope of the declaration.
+* Trigger callbacks are not called from the main pool's thread. Long-running callbacks do not impede the scheduling of other timers.
 * Timers can be dynamically registered and de-registered with the thread pool at runtime.
 * Timing intervals can be specified with nanosecond granularity.
 * In practice, trigger events are usually accurate to within 10 microseconds under even the heaviest of loads (high registered timer volume with heavy re-scheduling load).
-* Timer events can be attached directly to a C++11 lambda function, executing in the scope of the declaration.
-* Simple to incorporate into existing projects. All of the framework needed to maintain the thread pool is bootstrapped after the first timer is registered.
 
 Requirements
 ------------
@@ -37,7 +38,7 @@ Usage
 
 Linker flags required when using the library: `-lthreadpooltimer -lpthread`
 
-An example use of the library is shown below. This file can be compiled with these gcc options: `g++ -std=c++11 -o test test.cpp -lthreadpooltimer -lpthread`
+An example use of the entire library's functionality is shown below. This file can be compiled with these gcc options: `g++ -std=c++11 -o test test.cpp -lthreadpooltimer -lpthread`
 
 ```cpp
 /* test.cpp */
@@ -53,24 +54,30 @@ int main()
 {
     string s = "my scoped variable";
 
-    /* Create a new Timer object with a lambda function to be called when
-     * the timer triggers. */
-    Timer t([&]{
-        cout << s << endl;
-    });
+    try
+    {
+        /* Create a new Timer object with a lambda function to be called when
+         * the timer triggers. */
+        Timer t([&]{
+            cout << s << endl;
+        });
 
-    /* Set the timer's interval */
-    t.setInterval( chrono::nanoseconds(1000000000) );
+        /* Set the timer's interval */
+        t.setInterval( chrono::nanoseconds(1000000000) );
 
-    /* Start the timer */
-    t.setEnabled(true);
+        /* Start the timer */
+        t.setEnabled(true);
 
-    /* Wait for some time to allow the timer to trigger */
-    this_thread::sleep_for( chrono::seconds(10) );
-    
-    /* Stop and reset the timer */
-    t.setEnabled(false);
-
+        /* Wait for some time to allow the timer to trigger */
+        this_thread::sleep_for( chrono::seconds(10) );
+        
+        /* Stop and reset the timer */
+        t.setEnabled(false);
+    } 
+    catch( ThreadPoolTimerException &e )
+    {
+        cerr << "An exception was caught: " << e.what() << endl;
+    }
     return 0;
 }
 ```
