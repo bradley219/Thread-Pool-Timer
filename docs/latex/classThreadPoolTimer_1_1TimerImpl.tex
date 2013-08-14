@@ -1,0 +1,124 @@
+\hypertarget{classThreadPoolTimer_1_1TimerImpl}{\section{Thread\-Pool\-Timer\-:\-:Timer\-Impl Class Reference}
+\label{classThreadPoolTimer_1_1TimerImpl}\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+}
+
+
+{\ttfamily \#include $<$timer\-\_\-impl.\-hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classThreadPoolTimer_1_1TimerImpl_adbb7de16348e9819dabc9319e4dfd4d0}{Timer\-Impl} (std\-::function$<$ void()$>$ task)
+\item 
+\hyperlink{classThreadPoolTimer_1_1TimerImpl_a97e1cf4b5bc2dd00c723b646384cd496}{$\sim$\-Timer\-Impl} ()
+\item 
+void \hyperlink{classThreadPoolTimer_1_1TimerImpl_a50873e7385216f0adb1e188281e25d93}{set\-Interval} (const std\-::chrono\-::nanoseconds \&interval)
+\item 
+const std\-::chrono\-::nanoseconds \& \hyperlink{classThreadPoolTimer_1_1TimerImpl_a5d2786dbaa14891acd5330b61c1a4bda}{get\-Interval} ()
+\item 
+void \hyperlink{classThreadPoolTimer_1_1TimerImpl_ab1be2145856231b15f1abc156ee1c508}{set\-Enabled} (bool enabled)
+\item 
+bool \hyperlink{classThreadPoolTimer_1_1TimerImpl_a588fd97294a1eb941670b49d6829947e}{get\-Enabled} ()
+\item 
+void \hyperlink{classThreadPoolTimer_1_1TimerImpl_a82e3056f281fe397ee7e297a573f97f6}{set\-Next\-Trigger} (const std\-::chrono\-::steady\-\_\-clock\-::time\-\_\-point \&\hyperlink{classThreadPoolTimer_1_1TimerImpl_ac89984aaaad00020982dc23205672aa5}{trigger})
+\item 
+std\-::chrono\-::steady\-\_\-clock\-::time\-\_\-point \& \hyperlink{classThreadPoolTimer_1_1TimerImpl_ad3a5a4a2fabfd54b069f5f30c65f2fea}{get\-Next\-Trigger} ()
+\item 
+void \hyperlink{classThreadPoolTimer_1_1TimerImpl_ac89984aaaad00020982dc23205672aa5}{trigger} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{classThreadPoolTimer_1_1TimerImpl_afc1e2e4b54e377e665fa04c6273e599d}{stop\-Run\-Loop} ()
+\item 
+static void \hyperlink{classThreadPoolTimer_1_1TimerImpl_a593b3028fedb0b0d135313148232f3cc}{start\-Run\-Loop} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_adbb7de16348e9819dabc9319e4dfd4d0}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!Timer\-Impl@{Timer\-Impl}}
+\index{Timer\-Impl@{Timer\-Impl}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{Timer\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Pool\-Timer\-::\-Timer\-Impl\-::\-Timer\-Impl (
+\begin{DoxyParamCaption}
+\item[{std\-::function$<$ void()$>$}]{task}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_adbb7de16348e9819dabc9319e4dfd4d0}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_a97e1cf4b5bc2dd00c723b646384cd496}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!$\sim$\-Timer\-Impl@{$\sim$\-Timer\-Impl}}
+\index{$\sim$\-Timer\-Impl@{$\sim$\-Timer\-Impl}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{$\sim$\-Timer\-Impl}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Pool\-Timer\-::\-Timer\-Impl\-::$\sim$\-Timer\-Impl (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_a97e1cf4b5bc2dd00c723b646384cd496}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_a588fd97294a1eb941670b49d6829947e}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!get\-Enabled@{get\-Enabled}}
+\index{get\-Enabled@{get\-Enabled}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{get\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Thread\-Pool\-Timer\-::\-Timer\-Impl\-::get\-Enabled (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_a588fd97294a1eb941670b49d6829947e}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_a5d2786dbaa14891acd5330b61c1a4bda}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!get\-Interval@{get\-Interval}}
+\index{get\-Interval@{get\-Interval}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{get\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}const std\-::chrono\-::nanoseconds \& Thread\-Pool\-Timer\-::\-Timer\-Impl\-::get\-Interval (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_a5d2786dbaa14891acd5330b61c1a4bda}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_ad3a5a4a2fabfd54b069f5f30c65f2fea}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!get\-Next\-Trigger@{get\-Next\-Trigger}}
+\index{get\-Next\-Trigger@{get\-Next\-Trigger}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{get\-Next\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}std\-::chrono\-::steady\-\_\-clock\-::time\-\_\-point \& Thread\-Pool\-Timer\-::\-Timer\-Impl\-::get\-Next\-Trigger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_ad3a5a4a2fabfd54b069f5f30c65f2fea}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_ab1be2145856231b15f1abc156ee1c508}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!set\-Enabled@{set\-Enabled}}
+\index{set\-Enabled@{set\-Enabled}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{set\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-Impl\-::set\-Enabled (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_ab1be2145856231b15f1abc156ee1c508}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_a50873e7385216f0adb1e188281e25d93}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!set\-Interval@{set\-Interval}}
+\index{set\-Interval@{set\-Interval}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{set\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-Impl\-::set\-Interval (
+\begin{DoxyParamCaption}
+\item[{const std\-::chrono\-::nanoseconds \&}]{interval}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_a50873e7385216f0adb1e188281e25d93}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_a82e3056f281fe397ee7e297a573f97f6}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!set\-Next\-Trigger@{set\-Next\-Trigger}}
+\index{set\-Next\-Trigger@{set\-Next\-Trigger}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{set\-Next\-Trigger}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-Impl\-::set\-Next\-Trigger (
+\begin{DoxyParamCaption}
+\item[{const std\-::chrono\-::steady\-\_\-clock\-::time\-\_\-point \&}]{trigger}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_a82e3056f281fe397ee7e297a573f97f6}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_a593b3028fedb0b0d135313148232f3cc}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!start\-Run\-Loop@{start\-Run\-Loop}}
+\index{start\-Run\-Loop@{start\-Run\-Loop}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{start\-Run\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-Impl\-::start\-Run\-Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classThreadPoolTimer_1_1TimerImpl_a593b3028fedb0b0d135313148232f3cc}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_afc1e2e4b54e377e665fa04c6273e599d}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!stop\-Run\-Loop@{stop\-Run\-Loop}}
+\index{stop\-Run\-Loop@{stop\-Run\-Loop}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{stop\-Run\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-Impl\-::stop\-Run\-Loop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{classThreadPoolTimer_1_1TimerImpl_afc1e2e4b54e377e665fa04c6273e599d}
+\hypertarget{classThreadPoolTimer_1_1TimerImpl_ac89984aaaad00020982dc23205672aa5}{\index{Thread\-Pool\-Timer\-::\-Timer\-Impl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}!trigger@{trigger}}
+\index{trigger@{trigger}!ThreadPoolTimer::TimerImpl@{Thread\-Pool\-Timer\-::\-Timer\-Impl}}
+\subsubsection[{trigger}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-Impl\-::trigger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classThreadPoolTimer_1_1TimerImpl_ac89984aaaad00020982dc23205672aa5}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{timer__impl_8hpp}{timer\-\_\-impl.\-hpp}\item 
+\hyperlink{timer__impl_8cpp}{timer\-\_\-impl.\-cpp}\end{DoxyCompactItemize}
