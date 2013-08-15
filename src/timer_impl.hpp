@@ -32,7 +32,7 @@ class TimerRunLoop;
 class TimerImpl
 {
     public:
-        TimerImpl( std::function<void()> task );
+        TimerImpl( std::function<void()> task, const std::chrono::nanoseconds &interval = std::chrono::nanoseconds(0) );
         ~TimerImpl();
         
         static void stopRunLoop();
@@ -50,7 +50,7 @@ class TimerImpl
         void trigger();
 
     private:
-        std::function<void()> _task;
+        std::function<void()> _callback;
 
         TimerRunLoop &_runLoop;
 

@@ -37,9 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceThreadPoolTimer.html">ThreadPoolTimer</a></li><li class="navelem"><a class="el" href="classThreadPoolTimer_1_1Timer.html">Timer</a></li>  </ul>
+<li class="navelem"><b>ThreadPoolTimer</b></li><li class="navelem"><a class="el" href="classThreadPoolTimer_1_1Timer.html">Timer</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -95,30 +93,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
+<p>Asynchronous timer object.  
+ <a href="classThreadPoolTimer_1_1Timer.html#details">More...</a></p>
+
 <p><code>#include &lt;tp_timer.hpp&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a51953e9bed22f2b8bfef033a3efdc573"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#a51953e9bed22f2b8bfef033a3efdc573">Timer</a> (std::function&lt; void()&gt; task)</td></tr>
-<tr class="separator:a51953e9bed22f2b8bfef033a3efdc573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a123cb275809a87d0c01d2e9894298a40"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#a123cb275809a87d0c01d2e9894298a40">~Timer</a> ()</td></tr>
-<tr class="separator:a123cb275809a87d0c01d2e9894298a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931fa92e610af4ac53f665471b5516b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#a931fa92e610af4ac53f665471b5516b4">Timer</a> (std::function&lt; void()&gt; callback, const std::chrono::nanoseconds &amp;interval=std::chrono::nanoseconds(0))</td></tr>
+<tr class="memdesc:a931fa92e610af4ac53f665471b5516b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a <a class="el" href="classThreadPoolTimer_1_1Timer.html" title="Asynchronous timer object.">Timer</a> object with a callback.  <a href="#a931fa92e610af4ac53f665471b5516b4">More...</a><br/></td></tr>
+<tr class="separator:a931fa92e610af4ac53f665471b5516b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9112e65788529e3230b22dcace7421f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#a9112e65788529e3230b22dcace7421f7">setInterval</a> (const std::chrono::nanoseconds &amp;interval)</td></tr>
+<tr class="memdesc:a9112e65788529e3230b22dcace7421f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the timer's event interval.  <a href="#a9112e65788529e3230b22dcace7421f7">More...</a><br/></td></tr>
 <tr class="separator:a9112e65788529e3230b22dcace7421f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aed13ba283b0cd1e83697bc0d553b37d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#aed13ba283b0cd1e83697bc0d553b37d9">setEnabled</a> (bool enabled)</td></tr>
+<tr class="memdesc:aed13ba283b0cd1e83697bc0d553b37d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable or disable the timer.  <a href="#aed13ba283b0cd1e83697bc0d553b37d9">More...</a><br/></td></tr>
 <tr class="separator:aed13ba283b0cd1e83697bc0d553b37d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2543b0d593e885335786d5b2ed81302"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#ab2543b0d593e885335786d5b2ed81302">getEnabled</a> ()</td></tr>
+<tr class="memitem:ab2543b0d593e885335786d5b2ed81302"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab2543b0d593e885335786d5b2ed81302"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#ab2543b0d593e885335786d5b2ed81302">getEnabled</a> ()</td></tr>
+<tr class="memdesc:ab2543b0d593e885335786d5b2ed81302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the timer's enabled status. <br/></td></tr>
 <tr class="separator:ab2543b0d593e885335786d5b2ed81302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afc1617ff337812f126f04ee425f48caa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#afc1617ff337812f126f04ee425f48caa">stopRunLoop</a> ()</td></tr>
+<tr class="memdesc:afc1617ff337812f126f04ee425f48caa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the thread pool's run loop.  <a href="#afc1617ff337812f126f04ee425f48caa">More...</a><br/></td></tr>
 <tr class="separator:afc1617ff337812f126f04ee425f48caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5918ac320ad2bddfdbf72b0380392107"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1Timer.html#a5918ac320ad2bddfdbf72b0380392107">startRunLoop</a> ()</td></tr>
+<tr class="memdesc:a5918ac320ad2bddfdbf72b0380392107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the thread pool's run loop.  <a href="#a5918ac320ad2bddfdbf72b0380392107">More...</a><br/></td></tr>
 <tr class="separator:a5918ac320ad2bddfdbf72b0380392107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a51953e9bed22f2b8bfef033a3efdc573"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Asynchronous timer object. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a931fa92e610af4ac53f665471b5516b4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -126,45 +134,34 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">ThreadPoolTimer::Timer::Timer </td>
           <td>(</td>
           <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
-          <td class="paramname"><em>task</em></td><td>)</td>
+          <td class="paramname"><em>callback</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::chrono::nanoseconds &amp;&#160;</td>
+          <td class="paramname"><em>interval</em> = <code>std::chrono::nanoseconds(0)</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a class="anchor" id="a123cb275809a87d0c01d2e9894298a40"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ThreadPoolTimer::Timer::~Timer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Construct a <a class="el" href="classThreadPoolTimer_1_1Timer.html" title="Asynchronous timer object.">Timer</a> object with a callback. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">callback</td><td>Any callable target (lambda expressions, bind expressions, etc) </td></tr>
+    <tr><td class="paramname">interval</td><td>See <a class="el" href="classThreadPoolTimer_1_1Timer.html#a9112e65788529e3230b22dcace7421f7" title="Set the timer&#39;s event interval.">setInterval( const std::chrono::nanoseconds &amp;interval )</a>; </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab2543b0d593e885335786d5b2ed81302"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool ThreadPoolTimer::Timer::getEnabled </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="aed13ba283b0cd1e83697bc0d553b37d9"></a>
 <div class="memitem">
 <div class="memproto">
@@ -178,6 +175,15 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enable or disable the timer. </p>
+<p>Enabling the timer registers the timer with the thread pool, and events will begin to trigger at the specified interval. Attempting to enable the timer without previously setting an interval, or while the interval is set to zero, will throw a <a class="el" href="classThreadPoolTimer_1_1TimerException.html">TimerException</a>. Disabling the timer de-registers it from the thread pool. No further events will fire after <a class="el" href="classThreadPoolTimer_1_1Timer.html#aed13ba283b0cd1e83697bc0d553b37d9" title="Enable or disable the timer.">setEnabled()</a> returns. It is possible, however, that an event may fire after <a class="el" href="classThreadPoolTimer_1_1Timer.html#aed13ba283b0cd1e83697bc0d553b37d9" title="Enable or disable the timer.">setEnabled()</a> is called, but before it returns. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enabled</td><td>true to enable the timer; false to disable </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -194,6 +200,14 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Set the timer's event interval. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">interval</td><td>The timing interval specified in nanoseconds. Any std::chrono::duration value can be converted to nanoseconds with std::chrono::duration_cast&lt;std::chrono::nanoseconds(x). If the timer is enabled when the interval is set, the timer will first be disabled, the interval set, and then re-enabled. Setting the interval to 0 will disable the timer. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -218,6 +232,9 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Start the thread pool's run loop. </p>
+<p>This should only be called if the run loop has previously been stopped with <a class="el" href="classThreadPoolTimer_1_1Timer.html#afc1617ff337812f126f04ee425f48caa" title="Stop the thread pool&#39;s run loop.">stopRunLoop()</a>. The run loop is normally started automatically when the first <a class="el" href="classThreadPoolTimer_1_1Timer.html" title="Asynchronous timer object.">Timer</a> object is enabled. </p>
+
 </div>
 </div>
 <a class="anchor" id="afc1617ff337812f126f04ee425f48caa"></a>
@@ -241,16 +258,19 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Stop the thread pool's run loop. </p>
+<p>After the thread pool's run loop is stopped, no further events will trigger on any registered <a class="el" href="classThreadPoolTimer_1_1Timer.html" title="Asynchronous timer object.">Timer</a> objects. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="tp__timer_8hpp.html">tp_timer.hpp</a></li>
-<li><a class="el" href="timer_8cpp.html">timer.cpp</a></li>
+<li>tp_timer.hpp</li>
+<li>timer.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 13 2013 23:33:20 for ThreadPoolTimer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 15 2013 00:24:24 for ThreadPoolTimer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

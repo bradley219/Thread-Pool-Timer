@@ -29,9 +29,10 @@
 namespace ThreadPoolTimer
 {
 
-TimerImpl::TimerImpl( std::function<void()> task ) :
-    _task(task),
+TimerImpl::TimerImpl( std::function<void()> callback, const std::chrono::nanoseconds &interval ) :
+    _callback(callback),
     _enabled(false),
+    _interval(interval),
     _runLoop( TimerRunLoop::getSingleton() )
 {
 }
@@ -52,11 +53,21 @@ void TimerImpl::startRunLoop()
         
 void TimerImpl::setInterval( const std::chrono::nanoseconds &interval )
 {
+    bool reset = false;
+    if( _interval.count() < 0 )
+    {
+        throw TimerException("Invalid timer interval");
+    }
     if( _enabled )
     {
-        throw TimerException("cannot set Timer interval while timer is enabled");
+        setEnabled(false);
+        reset = true;
     }
     _interval = interval;
+    if( reset && _interval.count() > 0 )
+    {
+        setEnabled(true);
+    }
 }
 
 const std::chrono::nanoseconds &TimerImpl::getInterval()
@@ -68,6 +79,10 @@ void TimerImpl::setEnabled( bool enabled )
 {
     if( enabled != _enabled )
     {
+        if( enabled && _interval.count() == 0 )
+        {
+            throw TimerException("Cannot enable timer with a zero interval");
+        }
         _enabled = enabled;
         if( _enabled )
         {
@@ -97,7 +112,7 @@ std::chrono::steady_clock::time_point &TimerImpl::getNextTrigger()
         
 void TimerImpl::trigger()
 {
-    _task();
+    _callback();
 }
 
 }

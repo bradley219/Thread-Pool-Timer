@@ -25,9 +25,9 @@
 namespace ThreadPoolTimer
 {
 
-Timer::Timer( std::function<void()> task )
+Timer::Timer( std::function<void()> callback, const std::chrono::nanoseconds &interval )
 {
-    _impl = new TimerImpl( task );
+    _impl = new TimerImpl( callback, interval );
 }
 
 Timer::~Timer()

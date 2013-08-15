@@ -37,9 +37,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
       <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -71,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -82,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="namespaceThreadPoolTimer.html">ThreadPoolTimer</a></li><li class="navelem"><a class="el" href="classThreadPoolTimer_1_1TimerException.html">TimerException</a></li>  </ul>
+<li class="navelem"><b>ThreadPoolTimer</b></li><li class="navelem"><a class="el" href="classThreadPoolTimer_1_1TimerException.html">TimerException</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,8 +91,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">ThreadPoolTimer::TimerException Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;tp_timer.hpp&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ThreadPoolTimer::TimerException:</div>
 <div class="dyncontent">
@@ -107,44 +103,21 @@ Inheritance diagram for ThreadPoolTimer::TimerException:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aa64e837274d9cc224de2bbe0d5e9a3b9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1TimerException.html#aa64e837274d9cc224de2bbe0d5e9a3b9">TimerException</a> (const char *msg)</td></tr>
+<tr class="memitem:aa64e837274d9cc224de2bbe0d5e9a3b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa64e837274d9cc224de2bbe0d5e9a3b9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>TimerException</b> (const char *msg)</td></tr>
 <tr class="separator:aa64e837274d9cc224de2bbe0d5e9a3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classThreadPoolTimer_1_1ThreadPoolTimerException"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classThreadPoolTimer_1_1ThreadPoolTimerException')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classThreadPoolTimer_1_1ThreadPoolTimerException.html">ThreadPoolTimer::ThreadPoolTimerException</a></td></tr>
-<tr class="memitem:ae8c93063905438c07aab0d52997a1959 inherit pub_methods_classThreadPoolTimer_1_1ThreadPoolTimerException"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classThreadPoolTimer_1_1ThreadPoolTimerException.html#ae8c93063905438c07aab0d52997a1959">ThreadPoolTimerException</a> (const char *msg)</td></tr>
+<tr class="memitem:ae8c93063905438c07aab0d52997a1959 inherit pub_methods_classThreadPoolTimer_1_1ThreadPoolTimerException"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae8c93063905438c07aab0d52997a1959"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ThreadPoolTimerException</b> (const char *msg)</td></tr>
 <tr class="separator:ae8c93063905438c07aab0d52997a1959 inherit pub_methods_classThreadPoolTimer_1_1ThreadPoolTimerException"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aa64e837274d9cc224de2bbe0d5e9a3b9"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ThreadPoolTimer::TimerException::TimerException </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="tp__timer_8hpp.html">tp_timer.hpp</a></li>
+<li>tp_timer.hpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 13 2013 23:33:20 for ThreadPoolTimer by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Aug 15 2013 00:24:24 for ThreadPoolTimer by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.3.1
 </small></address>

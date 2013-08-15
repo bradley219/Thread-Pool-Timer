@@ -3,55 +3,60 @@
 }
 
 
+Asynchronous timer object.  
+
+
+
+
 {\ttfamily \#include $<$tp\-\_\-timer.\-hpp$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classThreadPoolTimer_1_1Timer_a51953e9bed22f2b8bfef033a3efdc573}{Timer} (std\-::function$<$ void()$>$ task)
-\item 
-\hyperlink{classThreadPoolTimer_1_1Timer_a123cb275809a87d0c01d2e9894298a40}{$\sim$\-Timer} ()
-\item 
+\hyperlink{classThreadPoolTimer_1_1Timer_a931fa92e610af4ac53f665471b5516b4}{Timer} (std\-::function$<$ void()$>$ callback, const std\-::chrono\-::nanoseconds \&interval=std\-::chrono\-::nanoseconds(0))
+\begin{DoxyCompactList}\small\item\em Construct a \hyperlink{classThreadPoolTimer_1_1Timer}{Timer} object with a callback. \end{DoxyCompactList}\item 
 void \hyperlink{classThreadPoolTimer_1_1Timer_a9112e65788529e3230b22dcace7421f7}{set\-Interval} (const std\-::chrono\-::nanoseconds \&interval)
-\item 
+\begin{DoxyCompactList}\small\item\em Set the timer's event interval. \end{DoxyCompactList}\item 
 void \hyperlink{classThreadPoolTimer_1_1Timer_aed13ba283b0cd1e83697bc0d553b37d9}{set\-Enabled} (bool enabled)
-\item 
-bool \hyperlink{classThreadPoolTimer_1_1Timer_ab2543b0d593e885335786d5b2ed81302}{get\-Enabled} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enable or disable the timer. \end{DoxyCompactList}\item 
+\hypertarget{classThreadPoolTimer_1_1Timer_ab2543b0d593e885335786d5b2ed81302}{bool \hyperlink{classThreadPoolTimer_1_1Timer_ab2543b0d593e885335786d5b2ed81302}{get\-Enabled} ()}\label{classThreadPoolTimer_1_1Timer_ab2543b0d593e885335786d5b2ed81302}
+
+\begin{DoxyCompactList}\small\item\em Get the timer's enabled status. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \hyperlink{classThreadPoolTimer_1_1Timer_afc1617ff337812f126f04ee425f48caa}{stop\-Run\-Loop} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Stop the thread pool's run loop. \end{DoxyCompactList}\item 
 static void \hyperlink{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380392107}{start\-Run\-Loop} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Start the thread pool's run loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+Asynchronous timer object. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{classThreadPoolTimer_1_1Timer_a51953e9bed22f2b8bfef033a3efdc573}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!Timer@{Timer}}
+\hypertarget{classThreadPoolTimer_1_1Timer_a931fa92e610af4ac53f665471b5516b4}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!Timer@{Timer}}
 \index{Timer@{Timer}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
 \subsubsection[{Timer}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Pool\-Timer\-::\-Timer\-::\-Timer (
 \begin{DoxyParamCaption}
-\item[{std\-::function$<$ void()$>$}]{task}
+\item[{std\-::function$<$ void()$>$}]{callback, }
+\item[{const std\-::chrono\-::nanoseconds \&}]{interval = {\ttfamily std\-:\-:chrono\-:\-:nanoseconds(0)}}
 \end{DoxyParamCaption}
-)}}\label{classThreadPoolTimer_1_1Timer_a51953e9bed22f2b8bfef033a3efdc573}
-\hypertarget{classThreadPoolTimer_1_1Timer_a123cb275809a87d0c01d2e9894298a40}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!$\sim$\-Timer@{$\sim$\-Timer}}
-\index{$\sim$\-Timer@{$\sim$\-Timer}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
-\subsubsection[{$\sim$\-Timer}]{\setlength{\rightskip}{0pt plus 5cm}Thread\-Pool\-Timer\-::\-Timer\-::$\sim$\-Timer (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classThreadPoolTimer_1_1Timer_a123cb275809a87d0c01d2e9894298a40}
+)}}\label{classThreadPoolTimer_1_1Timer_a931fa92e610af4ac53f665471b5516b4}
+
+
+Construct a \hyperlink{classThreadPoolTimer_1_1Timer}{Timer} object with a callback. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Any callable target (lambda expressions, bind expressions, etc) \\
+\hline
+{\em interval} & See \hyperlink{classThreadPoolTimer_1_1Timer_a9112e65788529e3230b22dcace7421f7}{set\-Interval( const std\-::chrono\-::nanoseconds \&interval )}; \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Member Function Documentation}
-\hypertarget{classThreadPoolTimer_1_1Timer_ab2543b0d593e885335786d5b2ed81302}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!get\-Enabled@{get\-Enabled}}
-\index{get\-Enabled@{get\-Enabled}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
-\subsubsection[{get\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}bool Thread\-Pool\-Timer\-::\-Timer\-::get\-Enabled (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{classThreadPoolTimer_1_1Timer_ab2543b0d593e885335786d5b2ed81302}
 \hypertarget{classThreadPoolTimer_1_1Timer_aed13ba283b0cd1e83697bc0d553b37d9}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!set\-Enabled@{set\-Enabled}}
 \index{set\-Enabled@{set\-Enabled}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
 \subsubsection[{set\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-::set\-Enabled (
@@ -59,6 +64,15 @@ static void \hyperlink{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380
 \item[{bool}]{enabled}
 \end{DoxyParamCaption}
 )}}\label{classThreadPoolTimer_1_1Timer_aed13ba283b0cd1e83697bc0d553b37d9}
+
+
+Enable or disable the timer. 
+
+Enabling the timer registers the timer with the thread pool, and events will begin to trigger at the specified interval. Attempting to enable the timer without previously setting an interval, or while the interval is set to zero, will throw a \hyperlink{classThreadPoolTimer_1_1TimerException}{Timer\-Exception}. Disabling the timer de-\/registers it from the thread pool. No further events will fire after \hyperlink{classThreadPoolTimer_1_1Timer_aed13ba283b0cd1e83697bc0d553b37d9}{set\-Enabled()} returns. It is possible, however, that an event may fire after \hyperlink{classThreadPoolTimer_1_1Timer_aed13ba283b0cd1e83697bc0d553b37d9}{set\-Enabled()} is called, but before it returns. 
+\begin{DoxyParams}{Parameters}
+{\em enabled} & true to enable the timer; false to disable \\
+\hline
+\end{DoxyParams}
 \hypertarget{classThreadPoolTimer_1_1Timer_a9112e65788529e3230b22dcace7421f7}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!set\-Interval@{set\-Interval}}
 \index{set\-Interval@{set\-Interval}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
 \subsubsection[{set\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-::set\-Interval (
@@ -66,6 +80,15 @@ static void \hyperlink{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380
 \item[{const std\-::chrono\-::nanoseconds \&}]{interval}
 \end{DoxyParamCaption}
 )}}\label{classThreadPoolTimer_1_1Timer_a9112e65788529e3230b22dcace7421f7}
+
+
+Set the timer's event interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & The timing interval specified in nanoseconds. Any std\-::chrono\-::duration value can be converted to nanoseconds with std\-::chrono\-::duration\-\_\-cast$<$std\-::chrono\-::nanoseconds(x). If the timer is enabled when the interval is set, the timer will first be disabled, the interval set, and then re-\/enabled. Setting the interval to 0 will disable the timer. \\
+\hline
+\end{DoxyParams}
 \hypertarget{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380392107}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!start\-Run\-Loop@{start\-Run\-Loop}}
 \index{start\-Run\-Loop@{start\-Run\-Loop}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
 \subsubsection[{start\-Run\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-::start\-Run\-Loop (
@@ -73,7 +96,11 @@ static void \hyperlink{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380392107}
-\hypertarget{classThreadPoolTimer_1_1Timer_afc1617ff337812f126f04ee425f48caa}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!stop\-Run\-Loop@{stop\-Run\-Loop}}
+
+
+Start the thread pool's run loop. 
+
+This should only be called if the run loop has previously been stopped with \hyperlink{classThreadPoolTimer_1_1Timer_afc1617ff337812f126f04ee425f48caa}{stop\-Run\-Loop()}. The run loop is normally started automatically when the first \hyperlink{classThreadPoolTimer_1_1Timer}{Timer} object is enabled. \hypertarget{classThreadPoolTimer_1_1Timer_afc1617ff337812f126f04ee425f48caa}{\index{Thread\-Pool\-Timer\-::\-Timer@{Thread\-Pool\-Timer\-::\-Timer}!stop\-Run\-Loop@{stop\-Run\-Loop}}
 \index{stop\-Run\-Loop@{stop\-Run\-Loop}!ThreadPoolTimer::Timer@{Thread\-Pool\-Timer\-::\-Timer}}
 \subsubsection[{stop\-Run\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void Thread\-Pool\-Timer\-::\-Timer\-::stop\-Run\-Loop (
 \begin{DoxyParamCaption}
@@ -82,7 +109,11 @@ static void \hyperlink{classThreadPoolTimer_1_1Timer_a5918ac320ad2bddfdbf72b0380
 )\hspace{0.3cm}{\ttfamily [static]}}}\label{classThreadPoolTimer_1_1Timer_afc1617ff337812f126f04ee425f48caa}
 
 
+Stop the thread pool's run loop. 
+
+After the thread pool's run loop is stopped, no further events will trigger on any registered \hyperlink{classThreadPoolTimer_1_1Timer}{Timer} objects. 
+
 The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{tp__timer_8hpp}{tp\-\_\-timer.\-hpp}\item 
-\hyperlink{timer_8cpp}{timer.\-cpp}\end{DoxyCompactItemize}
+tp\-\_\-timer.\-hpp\item 
+timer.\-cpp\end{DoxyCompactItemize}
