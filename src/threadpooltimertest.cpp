@@ -35,26 +35,40 @@ int main( int argc, char *argv[] )
     int triggercount = 0;
     std::vector<ThreadPoolTimer::Timer*> timers;
 
-    for( int i = 0; i < timercount; i++ )
+    try
     {
-        ThreadPoolTimer::Timer *timer = new ThreadPoolTimer::Timer([i,&triggercount](){
-            triggercount++;
-            std::cout << std::setw(2) << "timer " << i << " count=" << std::setw(5) << triggercount << std::endl;
-        });
 
-        timer->setInterval(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::milliseconds(100)));
-        timer->setEnabled(true);
-        timers.push_back(timer);
+        for( int i = 0; i < timercount; i++ )
+        {
+            ThreadPoolTimer::Timer *timer = new ThreadPoolTimer::Timer([i,&triggercount](){
+                triggercount++;
+                std::cout << std::setw(2) << "timer " << i << " count=" << std::setw(5) << triggercount << std::endl;
+            });
+
+            timer->setInterval(std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::milliseconds(100)));
+            timer->setEnabled(true);
+            timers.push_back(timer);
+            
+            std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        }
+
+        //while(1)
+        {
+            sleep(1);
+        }
+       
+        for( auto &timer : timers )
+        {
+            delete timer;
+        }
         
-        std::this_thread::sleep_for(std::chrono::milliseconds(10));
-    }
+        ThreadPoolTimer::Timer::stopRunLoop();
 
-    while(1)
-    {
-        sleep(1);
     }
-    
-    ThreadPoolTimer::Timer::stopRunLoop();
+    catch( ThreadPoolTimer::ThreadPoolTimerException &e )
+    {
+        std::cerr << "An exception was caught: " << e.what() << std::endl;
+    }
 
     return retval;
 }
